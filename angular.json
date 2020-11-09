@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "admin-IT-recruitment"
+    }
+  },
+  "defaultProject": "admin-IT-recruitment",
+  "cli": {
+    "analytics": "a684adaa-7190-46a5-b57d-57b13ef86edb"
+  }
 }
