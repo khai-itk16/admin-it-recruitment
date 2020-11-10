@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>{{title}}</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="form" class="form-horizontal">
+    <div class="input-field">
+        <input id="jobPositionName" type="text" formControlName="jobPositionName" class="form-control">
+        <label for="jobPositionName">Tên vị trí công việc</label>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions class="footer-modal text-center">
+    <button class="btn btn-default" (click)="close()">Đóng</button>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <button class="btn btn-success" [disabled]="form.invalid" (click)="save()">Lưu lại</button>
+</mat-dialog-actions>

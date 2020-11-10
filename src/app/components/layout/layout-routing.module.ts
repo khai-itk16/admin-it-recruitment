@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AccountComponent } from './account/account.component';
+import { CensorJobPostComponent } from './censor-job-post/censor-job-post.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { JobPostComponent } from './job-post/job-post.component';
 import { LayoutComponent } from './layout.component';
 import { PositionComponent } from './position/position.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -27,6 +31,22 @@ const routes: Routes = [
       {
         path: "position",
         component: PositionComponent
+      },
+      {
+        path: "profile",
+        component: ProfileComponent
+      },
+      {
+        path: "change-password",
+        component: ChangePasswordComponent
+      },
+      {
+        path: "job-post",
+        component: JobPostComponent
+      },
+      {
+        path: "censor-job-post",
+        component: CensorJobPostComponent
       }
     ]
   }

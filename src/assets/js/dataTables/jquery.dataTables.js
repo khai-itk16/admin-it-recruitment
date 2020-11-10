@@ -10525,7 +10525,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Next",
+				"sNext": "Sau",
 	
 	
 				/**
@@ -10548,7 +10548,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Previous"
+				"sPrevious": "Truớc"
 			},
 	
 			/**
@@ -10571,7 +10571,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "Không có dữ liệu",
 	
 	
 			/**
@@ -10603,7 +10603,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "Hiển thị _START_ đến _END_ của _TOTAL_ bản ghi",
 	
 	
 			/**
@@ -10624,7 +10624,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			"sInfoEmpty": "Hiển thị 0 đến 0 bản ghi",
 	
 	
 			/**
@@ -10646,7 +10646,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoFiltered": "(filtered from _MAX_ total entries)",
+			"sInfoFiltered": "",
 	
 	
 			/**
@@ -10813,7 +10813,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search:",
+			"sSearch": "Tìm kiếm:",
 	
 	
 			/**
@@ -10860,7 +10860,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sZeroRecords": "No matching records found"
+			"sZeroRecords": "Không có kết quả nào được tìm thấy"
 		},
 	
 	

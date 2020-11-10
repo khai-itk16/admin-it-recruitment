@@ -30,9 +30,9 @@
     </nav>
     <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#"><i class="fa fa-user fa-fw"></i> Thông tin cá nhân</a>
+        <li><a [routerLink]="['/admin/profile']"><i class="fa fa-user fa-fw"></i> Thông tin cá nhân</a>
         </li>
-        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Đổi mật khẩu</a>
+        <li><a [routerLink]="['/admin/change-password']"><i class="fa fa-gear fa-fw"></i> Đổi mật khẩu</a>
         </li>
         <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Đăng xuất</a>
         </li>
@@ -211,15 +211,15 @@
             <ul class="nav" id="main-menu">
 
                 <li>
-                    <a [routerLink]="['dashboard']" routerLinkActive="active-menu"  class="waves-effect waves-dark"><i class="fa fa-dashboard"></i>
+                    <a [routerLink]="['/admin/dashboard']" routerLinkActive="active-menu"  class="waves-effect waves-dark"><i class="fa fa-dashboard"></i>
                         Trang chủ</a>
                 </li>
                 <li>
-                    <a [routerLink]="['users']" routerLinkActive="active-menu"  class="waves-effect waves-dark"><i class="fa fa-users" aria-hidden="true"></i>
+                    <a [routerLink]="['/admin/users']" routerLinkActive="active-menu"  class="waves-effect waves-dark"><i class="fa fa-users" aria-hidden="true"></i>
                         Quản lý người dùng</a>
                 </li>
                 <li>
-                    <a [routerLink]="['position']" routerLinkActive="active-menu" class="waves-effect waves-dark"><i class="fa fa-table"></i>
+                    <a [routerLink]="['/admin/position']" routerLinkActive="active-menu" class="waves-effect waves-dark"><i class="fa fa-table"></i>
                         Quản lý vị trí công việc
                     </a>
                 </li>
@@ -228,13 +228,13 @@
                         Quản lý bài đăng<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="#">Bài đăng chờ phê duyệt</a>
+                            <a [routerLink]="['/admin/censor-job-post']" routerLinkActive="active-menu">Bài đăng chờ phê duyệt</a>
                         </li>
                         <li>
-                            <a href="#">Bài đăng đã phê duyệt</a>
+                            <a [routerLink]="['/admin/job-post']" routerLinkActive="active-menu">Bài đăng đã phê duyệt</a>
                         </li>
                         <li>
-                            <a href="#">Bài đăng đã hết hạn</a>
+                            <a [routerLink]="['/admin/job-post']" routerLinkActive="active-menu">Bài đăng đã hết hạn</a>
                         </li>
                         <!-- <li>
                             <a href="#">Second Level Link<span class="fa arrow"></span></a>

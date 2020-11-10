@@ -1,0 +1,31 @@
+.section-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-width: 1px 0 0!important;
+}
+
+.section-action:first {
+    border: 0 !important;
+}
+
+.section-action i {
+    cursor: pointer;
+    line-height: 2;
+}
+
+.section-action .text-info {
+    color: #00abff;
+}
+
+.section-action .text-primary {
+    color: #366f8c;
+}
+
+.section-action .text-warning {
+    color: #ecaa45;
+}
+
+.section-action .text-danger {
+    color: #ff1e1e;
+}

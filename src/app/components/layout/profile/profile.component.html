@@ -1,0 +1,41 @@
+<div id="page-wrapper">
+    <div class="header">
+        <h1 class="page-header">
+            Thông tin cá nhân
+        </h1>
+    </div>
+    <div id="page-inner">
+        <!-- /. ROW  -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Form Elements -->
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="panel-content">
+                            <table id="table_profile" class="table">
+                                <tr>
+                                    <td class="title">Tên đăng nhập:</td>
+                                    <td>{{ profileInfo?.username }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Email:</td>
+                                    <td>{{ profileInfo?.email }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Vai trò:</td>
+                                    <td><div *ngFor="let role of profileInfo?.roleEntities">{{ role?.roleName }}</div></td>
+                                </tr>
+                            </table>
+                            <div class="profile-action">
+                                <button class="btn btn-warning" routerLinkActive="router-link-active"
+                                [routerLink]="['/profile/edit-profile']">Chỉnh sửa</button>
+                            </div>
+                        </div>
+                    </div>
+                <!-- End Form Elements -->
+                </div>
+            </div>
+        </div>
+        <!-- /. ROW  -->
+    </div>
+</div>
