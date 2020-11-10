@@ -1,0 +1,73 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<mat-dialog-content>
+  <form [formGroup]="form" class="form-horizontal">
+    <div class="input-field">
+        <input id="username" type="text" formControlName="username" class="form-control">
+        <label for="username">Tên đăng nhập</label>
+        <div *ngIf="formControl.username?.errors 
+            && (formControl.username?.touched || formControl.username?.dirty)">
+            <div *ngIf="formControl.username.errors?.required"  class="text-validate">
+                Tên đăng nhập là bắt buộc.
+            </div>
+        </div>
+    </div>
+    <div class="input-field">
+        <input id="password" type="password" formControlName="password" class="form-control">
+        <label for="password">Mật khẩu</label>
+        <div *ngIf="formControl.password?.errors 
+            && (formControl.password?.touched || formControl.password?.dirty)">
+            <div *ngIf="formControl.password.errors?.required"  class="text-validate">
+                Bạn vui lòng nhập vào mật khẩu mới có dạng chữ cái, số và ký tự đặc biệt.
+            </div>
+        </div>
+    </div>
+    <div class="input-field">
+        <input id="confirmPassword" type="password" formControlName="confirmPassword" class="form-control">
+        <label for="confirmPassword">Xác nhận lại mật khẩu</label>
+        <div *ngIf="formControl.confirmPassword?.errors 
+            && (formControl.confirmPassword?.touched || formControl.confirmPassword?.dirty)">
+            <div *ngIf="formControl.confirmPassword.errors?.required"  class="text-validate">
+                Bạn vui lòng nhập vào mật khẩu mới có dạng chữ cái, số và ký tự đặc biệt.
+            </div>
+            <div *ngIf="formControl.confirmPassword.errors?.mustMatch"  class="text-validate">
+                Mật khẩu không khớp. Bạn vui lòng kiểm tra lại.
+            </div>
+        </div>
+    </div>
+    <div class="input-field">
+        <input id="email" type="text" formControlName="email" class="form-control">
+        <label for="email">email</label>
+        <div *ngIf="formControl.email?.errors 
+            && (formControl.email?.touched || formControl.email?.dirty)">
+            <div *ngIf="formControl.email.errors?.required"  class="text-validate">
+                Email là bắt buộc.
+            </div>
+            <div *ngIf="formControl.email.errors?.email"  class="text-validate">
+                Sai định dạng email.
+            </div>
+        </div>
+    </div>
+    <div class="input-field">
+        <label>Vai trò</label>
+        <select class="form-control role-select" formControlName="roleId">
+            <option value="">Chọn vai trò</option>
+            <option value="1">admin</option>
+            <option value="2">nhân viên</option>
+            <option value="3">ứng viên</option>
+            <option value="4">nhà tuyển dụng</option>
+        </select>
+        <div *ngIf="formControl.roleId?.errors 
+            && (formControl.roleId?.touched || formControl.roleId?.dirty)">
+            <div *ngIf="formControl.roleId.errors?.required"  class="text-validate">
+                Vai trò là bắt buộc.
+            </div>
+        </div>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions class="footer-modal text-center">
+    <button class="btn btn-default" (click)="close()">Đóng</button>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <button class="btn btn-success" [disabled]="form.invalid" (click)="save()">Lưu lại</button>
+</mat-dialog-actions>

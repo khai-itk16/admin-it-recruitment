@@ -16,6 +16,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { ModalPositionComponent } from './modal-position/modal-position.component';
+import { ModalAccountComponent } from './modal-account/modal-account.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ModalPositionComponent } from './modal-position/modal-position.componen
     ProfileComponent, 
     ChangePasswordComponent, 
     CensorJobPostComponent,
-    ModalPositionComponent
+    ModalPositionComponent,
+    ModalAccountComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +43,8 @@ import { ModalPositionComponent } from './modal-position/modal-position.componen
     MatDialogModule
   ],
   entryComponents: [
-    ModalPositionComponent
+    ModalPositionComponent,
+    ModalAccountComponent
   ]
 })
 export class LayoutModule { }

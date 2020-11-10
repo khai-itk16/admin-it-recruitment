@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 declare var $: any;
 
@@ -9,7 +10,9 @@ declare var $: any;
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public authService: AuthService
+  ) { }
 
   ngOnInit(): void {
     this.initFunction()

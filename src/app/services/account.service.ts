@@ -34,4 +34,8 @@ export class AccountService {
   deleteAccountById(accountId) {
     return this.http.delete<any>(this.urlConfig.urlAccount+"/"+accountId)
   }
+
+  addAccount(account) {
+    return this.http.post<any>(this.urlConfig.urlHost+"/api/auth/register", account)
+  }
 }

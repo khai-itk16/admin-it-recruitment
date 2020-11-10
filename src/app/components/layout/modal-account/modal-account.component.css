@@ -1,0 +1,21 @@
+.role-select {
+    border-radius: 0;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-horizontal {
+    margin-top: 20px;
+}
+
+.footer-modal {
+    justify-content: center;
+}
+
+.text-validate {
+    font-size: 12px;
+    font-style: italic;
+    color: orangered;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
