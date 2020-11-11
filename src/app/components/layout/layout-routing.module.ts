@@ -4,6 +4,7 @@ import { AccountComponent } from './account/account.component';
 import { CensorJobPostComponent } from './censor-job-post/censor-job-post.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { JobPostDetailComponent } from './job-post-detail/job-post-detail.component';
 import { JobPostComponent } from './job-post/job-post.component';
 import { LayoutComponent } from './layout.component';
 import { PositionComponent } from './position/position.component';
@@ -43,6 +44,10 @@ const routes: Routes = [
       {
         path: "job-post",
         component: JobPostComponent
+      },
+      {
+        path: "job-post-detail",
+        component: JobPostDetailComponent
       },
       {
         path: "censor-job-post",

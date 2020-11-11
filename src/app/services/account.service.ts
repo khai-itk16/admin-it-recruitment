@@ -38,4 +38,8 @@ export class AccountService {
   addAccount(account) {
     return this.http.post<any>(this.urlConfig.urlHost+"/api/auth/register", account)
   }
+
+  countAllAccounts() {
+    return this.http.get<any>(this.urlConfig.urlAccount + "/count")
+  }
 }

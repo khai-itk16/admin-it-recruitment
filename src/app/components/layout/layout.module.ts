@@ -17,6 +17,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { ModalPositionComponent } from './modal-position/modal-position.component';
 import { ModalAccountComponent } from './modal-account/modal-account.component';
+import { JobPostDetailComponent } from './job-post-detail/job-post-detail.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ModalAccountComponent } from './modal-account/modal-account.component';
     ChangePasswordComponent, 
     CensorJobPostComponent,
     ModalPositionComponent,
-    ModalAccountComponent
+    ModalAccountComponent,
+    JobPostDetailComponent
   ],
   imports: [
     CommonModule,

@@ -26,4 +26,8 @@ export class PositionService {
   deleteJobPositionById(jobPositionId) {
     return this.http.delete<any>(this.urlConfig.urlPosition + "/" + jobPositionId)
   }
+
+  countAllJobPositions() {
+    return this.http.get<any>(this.urlConfig.urlPosition+"/count")
+  }
 }

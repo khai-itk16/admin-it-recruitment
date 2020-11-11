@@ -67,7 +67,6 @@ export class PositionComponent implements OnInit {
       }
       this.positionService.addJobPosition(jobPosition).subscribe(
         res => {
-          console.log(res)
           this.positions.push(res)
           this.toastrService.success("Thêm mới vị trí thành công", "SUCCESS", {
             timeOut: 3000,
@@ -94,7 +93,6 @@ export class PositionComponent implements OnInit {
       }
       this.positionService.editJobPosition(jobPositionUp).subscribe(
         res => {
-          console.log(res)
           let indexJobPositionUpdate = this.positions?.findIndex(position => position.jobPositionId == jobPosition?.jobPositionId) 
           this.positions[indexJobPositionUpdate].jobPositionName = res.jobPositionName
           this.toastrService.success("Cập nhật vị trí thành công", "SUCCESS", {
@@ -126,7 +124,6 @@ export class PositionComponent implements OnInit {
       if (result.isConfirmed) {
         this.positionService.deleteJobPositionById(jobPositionId).subscribe(
           res => {
-            console.log(res)
             let indexJobPositionDelete = this.positions?.findIndex(position => position.jobPositionId == jobPositionId) 
             this.positions.splice(indexJobPositionDelete, 1)
             this.toastrService.success("Xóa vị trí thành công", "SUCCESS", {

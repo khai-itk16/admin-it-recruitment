@@ -12,6 +12,7 @@ import { AuthService } from './services/auth.service';
 import { DecodeJwtService } from './services/decode-jwt.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/auth/login/login.component';
+import { DataTransferService } from './services/data-transfer.service';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { LoginComponent } from './components/auth/login/login.component';
   providers: [
     AuthService,
     DecodeJwtService,
+    DataTransferService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,

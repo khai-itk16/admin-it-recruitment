@@ -42,7 +42,6 @@ export class ChangePasswordComponent implements OnInit {
     }
     this.accountService.changeAccountPassword(passwordDTO).subscribe(
       res => {
-        console.log(res)
         this.toastrService.success("Cập nhật mật khẩu thành công", "SUCCESS", {
           timeOut: 3000,
           closeButton: true,

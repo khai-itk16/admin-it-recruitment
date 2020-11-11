@@ -1,0 +1,100 @@
+  <div id="page-wrapper">
+    <div class="header">
+      <h1 class="page-header">
+        Chi tiết bài đăng
+      </h1>
+  
+    </div>
+  
+    <div id="page-inner">
+  
+      <div class="row">
+        <div class="content">
+            <div class="main-entity">
+              <div class="side_bar col-md-3">
+                <div class="inside">
+                  <div class="logo">
+                    <a>
+                      <img [src]="getImage()">
+                    </a></div>
+                  <div class="employer-info">
+                    <h3 class="name">
+                      <a>{{ jobPost?.employerResumeDTO?.employerName }}</a>
+                    </h3>
+                    <div class="basic-info">
+                      <div><i class="fa fa-users" aria-hidden="true"></i>{{ jobPost?.employerResumeDTO?.numMember }}  thành viên
+                      </div>
+                      <div class="working-date">
+                        <i class="fa fa-calendar"></i>
+                        <span>
+                          {{ jobPost?.employerResumeDTO?.workTime }}
+                        </span>
+                      </div>
+                      <div class="overtime">
+                        <i class="fa fa-clock-o"></i>
+                        <span>
+                          Không có OT
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="job-detail col-md-9">
+                <div class="header">
+                  <div class="job_info">
+                    <h1 class="job_title">
+                      {{ jobPost?.jobTitle }}
+                    </h1>
+                    <div class="clearfix"></div>
+                    <div class="address-wrapper">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      <div class="address">
+                        <span>{{ getAddress() }}</span>
+                      </div>
+                      <a target="_blank" class="address-map" [href]="'https://www.google.com/maps?q='+ getAddress()">
+                        Xem bản đồ
+                      </a>
+                    </div>
+                    <div class="address">
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="expire-time-job">
+                      <i class="fa fa-calendar"></i>
+                      Hạn nộp hồ sơ:
+                      <span style="color: #337ab7;">{{ jobPost?.expirePostTime | date: "dd/MM/yyyy" }}</span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+                <div class="job_description">
+                  <div class="title-apply-line">
+                    <h2 class="title">Mô Tả Công Việc</h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="description">
+                    
+                  </div>
+                </div>
+                <div class="skills_experience">
+                  <h2 class="title">Yêu Cầu Công Việc</h2>
+                  <div class="experience">
+                    
+                  </div>
+                </div>
+                <div class="love_working_here">
+                  <h2 class="title">Thông điệp từ công ty</h2>
+                  <div class="culture_description">
+                    <!-- content set by js -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- /. ROW  -->
+    </div>
+    <!-- /. PAGE INNER  -->
+  </div>
+  <!-- /. PAGE WRAPPER  -->

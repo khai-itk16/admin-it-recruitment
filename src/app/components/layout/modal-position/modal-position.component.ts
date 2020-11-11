@@ -18,7 +18,6 @@ export class ModalPositionComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.data)
     this.title = (this.data == null) ? "Thêm vị trí công việc" : "Cập nhật vị trí công việc"
     this.form = this.fb.group({
       jobPositionName: [this.data, [Validators.required]]
