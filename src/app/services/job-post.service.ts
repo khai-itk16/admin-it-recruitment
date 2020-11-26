@@ -23,4 +23,8 @@ export class JobPostService {
   countJobPostByStatus(statusJobPostId) {
     return this.http.get<any>(this.urlConfig.urlPost+"/count", { params: { statusJobPostId } })
   }
+
+  deleteJobPost(jobPostId) {
+    return this.http.delete<any>(this.urlConfig.urlPost + "/" + jobPostId)
+  }
 }

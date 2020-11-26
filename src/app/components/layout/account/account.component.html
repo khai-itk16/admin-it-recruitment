@@ -48,8 +48,8 @@
                     </td>
                     <td class="center section-action">
                       <!-- <i class="fa fa-eye text-info" title="xem chi tiết" aria-hidden="true"></i>
-                      <i class="fa fa-pencil-square-o text-primary" title="chỉnh sửa" aria-hidden="true"></i>
-                      <i class="fa fa-unlock text-warning" title="khóa tài khoản" aria-hidden="true"></i> -->
+                      <i class="fa fa-pencil-square-o text-primary" title="chỉnh sửa" aria-hidden="true"></i>-->
+                      <i class="fa fa-exchange text-warning" (click)="changeAccountStatus(account?.accountId)" title="thay đổi trạng thái của tài khoản" aria-hidden="true"></i> 
                       <i class="fa fa-trash-o text-danger" (click)="deleteAccount(account?.accountId)" title="xóa tài khoản" aria-hidden="true"></i>
                     </td>
                   </tr>

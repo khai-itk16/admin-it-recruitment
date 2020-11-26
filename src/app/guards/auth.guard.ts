@@ -19,13 +19,13 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if(!this.authService.loggedIn()) {
         this.router.navigate(["/auth/login"])
-        this.toastrService.error("Bạn phải đăng nhập vào hệ thống mới sử dụng được chức năng này", "ERROR", {
-          timeOut: 3000,
-          closeButton: true,
-          progressBar: true,
-          progressAnimation: 'increasing',
-          tapToDismiss: false
-        })
+        // this.toastrService.error("Bạn phải đăng nhập vào hệ thống mới sử dụng được chức năng này", "ERROR", {
+        //   timeOut: 3000,
+        //   closeButton: true,
+        //   progressBar: true,
+        //   progressAnimation: 'increasing',
+        //   tapToDismiss: false
+        // })
         return false
       }
       return true

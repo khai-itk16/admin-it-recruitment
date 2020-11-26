@@ -1,7 +1,7 @@
 <div id="page-wrapper">
   <div class="header">
     <h1 class="page-header">
-      Quản lý bài đăng đã phê duyệt
+      Quản lý bài đăng
     </h1>
 
   </div>
@@ -13,9 +13,13 @@
         <!-- Advanced Tables -->
         <div class="card">
           <div class="card-action">
-            Danh sách bài đăng đã phê duyệt
+            {{ (isExpire)?"Danh sách bài đăng đã hết hạn":"Danh sách bài đăng đã phê duyệt" }}
           </div>
-          <div class="card-content row">
+
+          <div class="card-content row" *ngIf="jobPosts?.length == 0">
+            <h2 class="text-center text-danger">KHÔNG CÓ BÀI ĐĂNG NÀO ĐƯỢC TÌM THẤY</h2>
+          </div>
+          <div class="card-content row" *ngIf="jobPosts?.length != 0">
             <div class="col-sm-6">
               <div class="input-field">
                 <input id="search" type="text" [(ngModel)]="filter" name="filter" class="form-control input-sm">
@@ -48,7 +52,7 @@
                       <i class="fa fa-eye text-info" title="xem chi tiết" aria-hidden="true" (click)="viewDetail(jobPost)"></i>
                       <!--<i class="fa fa-pencil-square-o text-primary" title="chỉnh sửa" aria-hidden="true"></i>
                       <i class="fa fa-unlock text-warning" title="khóa tài khoản" aria-hidden="true"></i> -->
-                      <!-- <i class="fa fa-trash-o text-danger" (click)="deleteAccount(account?.accountId)" title="xóa tài khoản" aria-hidden="true"></i> -->
+                      <i class="fa fa-trash-o text-danger" (click)="deleteJobPost(jobPost?.jobPostId)" title="xóa tài khoản" aria-hidden="true"></i>
                     </td>
                   </tr>
                 </tbody>

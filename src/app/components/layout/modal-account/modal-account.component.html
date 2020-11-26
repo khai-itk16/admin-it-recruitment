@@ -1,4 +1,4 @@
-<h2 mat-dialog-title>{{title}}</h2>
+<h2 mat-dialog-title class="text-uppercase text-center picker__list-item">{{title}}</h2>
 <mat-dialog-content>
   <form [formGroup]="form" class="form-horizontal">
     <div class="input-field">
@@ -16,8 +16,8 @@
         <label for="password">Mật khẩu</label>
         <div *ngIf="formControl.password?.errors 
             && (formControl.password?.touched || formControl.password?.dirty)">
-            <div *ngIf="formControl.password.errors?.required"  class="text-validate">
-                Bạn vui lòng nhập vào mật khẩu mới có dạng chữ cái, số và ký tự đặc biệt.
+            <div *ngIf="formControl.password.errors?.required" class="text-validate">
+                Bạn vui lòng nhập vào mật khẩu có dạng chữ cái, số và ký tự đặc biệt.
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
         <div *ngIf="formControl.confirmPassword?.errors 
             && (formControl.confirmPassword?.touched || formControl.confirmPassword?.dirty)">
             <div *ngIf="formControl.confirmPassword.errors?.required"  class="text-validate">
-                Bạn vui lòng nhập vào mật khẩu mới có dạng chữ cái, số và ký tự đặc biệt.
+                Bạn vui lòng nhập vào mật khẩu có dạng chữ cái, số và ký tự đặc biệt.
             </div>
             <div *ngIf="formControl.confirmPassword.errors?.mustMatch"  class="text-validate">
                 Mật khẩu không khớp. Bạn vui lòng kiểm tra lại.

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from 'src/app/services/account.service';
+import { DecodeJwtService } from 'src/app/services/decode-jwt.service';
 
 @Component({
   selector: 'app-profile',
@@ -11,7 +12,8 @@ export class ProfileComponent implements OnInit {
   profileInfo
 
   constructor(
-    private accountService: AccountService
+    private accountService: AccountService,
+    private decodeJwtService: DecodeJwtService
   ) { }
 
   ngOnInit(): void {
@@ -19,7 +21,7 @@ export class ProfileComponent implements OnInit {
   }
 
   getProfileInfo() {
-    const id=21
+    const id = this.decodeJwtService?.getDecodedAccessToken()?.id
     this.accountService.getAccountById(id).subscribe(
       res => {
         console.log(res)

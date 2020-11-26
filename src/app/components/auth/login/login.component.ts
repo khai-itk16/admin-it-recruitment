@@ -29,10 +29,8 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser(){
-    console.log(this.form.value)
     this.authService.loginUser(this.form.value).subscribe(
       res => {
-        console.log(res)
         let roles = Object(jwt_decode(res.token)).roles
         console.log(roles)
         if(roles == 'ROLE_ADMIN,ROLE_EDITOR' || roles == 'ROLE_EDITOR'){
@@ -56,13 +54,25 @@ export class LoginComponent implements OnInit {
         }
       }, 
       error => {
-        this.toastrService.error("Vui lòng kiểm tra lại thông tin tên đăng nhập và mật khẩu", "ERROR", {
-          timeOut: 3000,
-          closeButton: true,
-          progressBar: true,
-          progressAnimation: 'increasing',
-          tapToDismiss: false
-        })
+        if(error.status == 401) {
+          this.toastrService.error("Vui lòng kiểm tra lại thông tin tên đăng nhập và mật khẩu", "ERROR", {
+            timeOut: 3000,
+            closeButton: true,
+            progressBar: true,
+            progressAnimation: 'increasing',
+            tapToDismiss: false
+          })
+        }
+
+        if(error.status == 403) {
+          this.toastrService.warning("Tài khoản của bạn đã bị khóa. Bạn không thể truy cập vào hệ thống", "WARNING", {
+            timeOut: 3000,
+            closeButton: true,
+            progressBar: true,
+            progressAnimation: 'increasing',
+            tapToDismiss: false
+          })
+        }
         console.log(error);
       }
     )
